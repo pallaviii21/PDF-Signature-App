@@ -41,11 +41,9 @@ SIGNify is a secure and elegant PDF document signing app built using the **MERN 
 
 ## 🖼️ Screenshots
 ![image](https://github.com/user-attachments/assets/b92ba13d-bbf4-4b71-b603-9382b62feb13)
-
 ![image](https://github.com/user-attachments/assets/9189a8a7-5b60-410a-9c89-579234074516)
-
-
-![PDF Signer](screenshots/signer.png)
+![image](https://github.com/user-attachments/assets/beb05ec7-21f6-49aa-a124-7d098237c1ea)
+![image](https://github.com/user-attachments/assets/13034a8c-f79d-4ede-899a-00cddd12e142)
 
 ---
 
