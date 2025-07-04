@@ -139,9 +139,6 @@ npm run dev  # Runs on http://localhost:5173
 
   Manually create an uploads folder in the root directory
 
----
-## 📧 Contact
-Reach out at: pallaviiik11.11@gmail.com
 
 ---
 ## 🔐 Environment Variables
@@ -158,3 +155,5 @@ VITE_CLIENT_URL=https://pdf-signature-app-pi.vercel.app
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password_or_app_key
 ```
+## 📧 Contact
+Reach out at: pallaviiik11.11@gmail.com
