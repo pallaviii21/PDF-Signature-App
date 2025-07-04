@@ -1,0 +1,21 @@
+# node modules (for both client and server)
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# build artifacts
+client/dist/
+client/build/
+server/build/
+
+# environment files
+.env
+client/.env
+server/.env
+
+# uploads (optional if you don't want to track uploaded files)
+uploads/
+
+# system files
+.DS_Store
+Thumbs.db
