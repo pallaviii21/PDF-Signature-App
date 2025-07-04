@@ -17,7 +17,7 @@ const RegisterPage = () => {
     }
 
     try {
-      await axios.post("/api/auth/register", { name, email, password });
+      await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/auth/register`, { name, email, password });
       alert("Registration successful! Please verify your email.");
       navigate("/login");
     } catch (err) {

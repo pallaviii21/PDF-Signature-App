@@ -14,7 +14,7 @@ const UploadPage = () => {
     formData.append("pdf", file);
 
     try {
-      await axios.post("/api/docs/upload", formData, {
+      await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/docs/upload`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "multipart/form-data",

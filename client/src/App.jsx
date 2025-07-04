@@ -3,7 +3,7 @@ import UploadPage from "./pages/UploadPage";
 import PDFSignerPage from "./pages/PDFSignerPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import Dashboard from "./pages/Dashboard"; // view uploaded PDFs
+import Dashboard from "./pages/Dashboard"; 
 import IndexPage from "./pages/IndexPage";
 import PreviewPage from "./pages/PreviewPage";
 import VerifyEmailPage from "./pages/VerifyEmailPage";

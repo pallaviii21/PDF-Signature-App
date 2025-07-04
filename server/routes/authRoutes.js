@@ -6,7 +6,7 @@ const {
   verifyEmail,
   forgotPassword,
   resetPassword,
-} = require("../controllers/authController"); // Update path if needed
+} = require("../controllers/authController");
 
 // Public Auth Routes
 router.post("/register", register);

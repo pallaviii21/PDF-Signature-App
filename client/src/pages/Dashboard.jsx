@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { FiUser, FiLogOut } from "react-icons/fi"; // Optional icons
+import { FiUser, FiLogOut } from "react-icons/fi";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,7 +9,7 @@ import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 const Dashboard = () => {
   const [docs, setDocs] = useState([]);
   const navigate = useNavigate();
-  const userName = localStorage.getItem("username"); // if stored during login
+  const userName = localStorage.getItem("username"); 
 
   useEffect(() => {
     const fetchDocs = async () => {
@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("userName"); // Optional if you're storing name
+    localStorage.removeItem("userName"); 
     navigate("/login");
   };
 
