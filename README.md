@@ -72,6 +72,77 @@ SIGNify is a secure and elegant PDF document signing app built using the **MERN 
 ### `client/.env`
 ```env
 VITE_SERVER_URL=https://signify-server-xxxxx.onrender.com
+server/.env
+env
+Copy code
+PORT=5000
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_jwt_secret
+VITE_CLIENT_URL=https://pdf-signature-app-pi.vercel.app
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password_or_app_key
+🚀 Getting Started Locally
+🔧 Prerequisites
+Node.js & npm
+
+MongoDB
+
+(Optional) Vite globally installed
+
+1. Clone the Repository
+bash
+Copy code
+git clone https://github.com/yourusername/signify-pdf-signer.git
+cd signify-pdf-signer
+2. Setup Backend
+bash
+Copy code
+cd server
+npm install
+touch .env  # Add environment variables here
+npm run dev  # Runs on http://localhost:5000
+3. Setup Frontend
+bash
+Copy code
+cd client
+npm install
+touch .env  # Add VITE_SERVER_URL
+npm run dev  # Runs on http://localhost:5173
+
+
+🧪 Testing Checklist
+✅ Register a new account (check email for verification)
+
+✅ Upload a PDF
+
+✅ Type and drag your signature
+
+✅ Preview and download the signed PDF
+
+✅ Delete any uploaded document
+
+📦 Deployment Guide
+🔹 Frontend (Vercel)
+Push /client folder to GitHub
+
+Connect to Vercel and import project
+
+Set VITE_SERVER_URL in Vercel Environment Variables
+
+🔹 Backend (Render)
+Push /server folder to GitHub
+
+Create a new Web Service on Render
+
+Add Environment Variables (PORT, MONGO_URI, JWT_SECRET, etc.)
+
+Manually create an uploads folder in the root directory
+
+
+
+📧 Contact
+Reach out at: pallaviiik11.11@gmail.com
+
 
 
 
