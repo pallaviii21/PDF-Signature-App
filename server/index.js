@@ -6,10 +6,25 @@ require("dotenv").config();
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  process.env.VITE_CLIENT_URL,
+];
+
 app.use(cors({
-  origin: process.env.VITE_CLIENT_URL,
+  origin: function (origin, callback) {
+    // Allow server-to-server or curl with no origin
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    callback(new Error("Not allowed by CORS"));
+  },
   credentials: true,
 }));
+
+// app.use(cors({
+//   origin: process.env.VITE_CLIENT_URL,
+//   credentials: true,
+// }));
 app.use(express.json());
 
 // Serve static files from /uploads
