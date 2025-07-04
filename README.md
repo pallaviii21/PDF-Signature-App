@@ -49,13 +49,21 @@ SIGNify is a secure and elegant PDF document signing app built using the **MERN 
 
 ## 📁 Folder Structure
 ├── client
+
 │ ├── public
+
 │ ├── src
+
 │ │ ├── components
+
 │ │ ├── pages
+
 │ │ ├── App.jsx
+
 │ │ ├── main.jsx
+
 │ │ └── ...
+
 ├── server
 │ ├── controllers
 │ ├── models
