@@ -6,7 +6,10 @@ require("dotenv").config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: process.env.VITE_CLIENT_URL,
+  credentials: true,
+}));
 app.use(express.json());
 
 // Serve static files from /uploads

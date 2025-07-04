@@ -35,7 +35,7 @@ const register = async (req, res) => {
       verified: false,
     });
 
-    const verifyUrl = `http://localhost:5173/verify-email?token=${verificationToken}&id=${newUser._id}`;
+    const verifyUrl = `${process.env.VITE_CLIENT_URL}/verify-email?token=${verificationToken}&id=${newUser._id}`;
 
     await transporter.sendMail({
       from: `"Signify" <${process.env.EMAIL_USER}>`,
