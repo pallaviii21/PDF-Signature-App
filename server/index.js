@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const fs = require("fs");
+
+// ✅ Ensure uploads/ folder exists
+const uploadsDir = "uploads";
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+}
+
 const app = express();
 
 // Middleware
