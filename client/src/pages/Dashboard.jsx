@@ -38,7 +38,7 @@ const Dashboard = () => {
   if (!confirmDelete) return;
 
   try {
-    await axios.delete(`/api/docs/${id}`, {
+    await axios.delete(`${import.meta.env.VITE_SERVER_URL}/api/docs/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
 
