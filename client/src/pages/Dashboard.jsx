@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { FiUser, FiLogOut } from "react-icons/fi";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,14 +11,21 @@ const Dashboard = () => {
   const userName = localStorage.getItem("username"); 
 
   useEffect(() => {
-    const fetchDocs = async () => {
-      const res = await axios.get("/api/docs", {
+  const fetchDocs = async () => {
+    try {
+      const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/docs`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
-      setDocs(res.data);
-    };
-    fetchDocs();
-  }, []);
+
+      setDocs(Array.isArray(res.data) ? res.data : []);
+    } catch (err) {
+      console.error("Error fetching documents:", err);
+      alert("Failed to fetch documents.");
+    }
+  };
+  fetchDocs();
+}, []);
+
 
   const handleLogout = () => {
     localStorage.removeItem("token");
