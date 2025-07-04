@@ -65,14 +65,19 @@ SIGNify is a secure and elegant PDF document signing app built using the **MERN 
 │ │ └── ...
 
 ├── server
+
 │ ├── controllers
+
 │ ├── models
+
 │ ├── routes
+
 │ ├── uploads
+
 │ └── index.js
 
 ---
-🚀 Getting Started Locally
+### 🚀 Getting Started Locally
 🔧 Prerequisites
 Node.js & npm
 
@@ -80,22 +85,30 @@ MongoDB
 
 (Optional) Vite globally installed
 
-1. Clone the Repository
+# 1. Clone the Repository
 bash
   git clone https://github.com/yourusername/signify-pdf-signer.git
+  
   cd signify-pdf-signer
-2. Setup Backend
+  
+# 2. Setup Backend
 bash
   cd server
+  
   npm install
+  
   touch .env  # Add environment variables here
+  
   npm run dev  # Runs on http://localhost:5000
-3. Setup Frontend
+  
+# 3. Setup Frontend
 bash
-  Copy code
   cd client
+  
   npm install
+  
   touch .env  # Add VITE_SERVER_URL
+  
   npm run dev  # Runs on http://localhost:5173
 
 
@@ -136,7 +149,9 @@ Reach out at: pallaviiik11.11@gmail.com
 
 ### `client/.env`
 ```env
+client/.env
 VITE_SERVER_URL=https://signify-server-xxxxx.onrender.com
+
 server/.env
 env
 Copy code
@@ -146,22 +161,3 @@ JWT_SECRET=your_jwt_secret
 VITE_CLIENT_URL=https://pdf-signature-app-pi.vercel.app
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password_or_app_key
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
