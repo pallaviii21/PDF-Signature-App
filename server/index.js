@@ -31,7 +31,9 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
-app.use('/{*splat}', handler);
+app.use('/{*splat}', (req, res) => {
+  res.status(404).send('Page not found');
+});
 
 // Middleware
 app.use(express.json());
