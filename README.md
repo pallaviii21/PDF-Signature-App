@@ -145,13 +145,13 @@ npm run dev  # Runs on http://localhost:5173
 
 ### `client/.env
 ```env 
-VITE_SERVER_URL=https://signify-server-xxxxx.onrender.com
+VITE_SERVER_URL=https://your-server-xxxxx.onrender.com
 ```
 ### `server/.env
 ```env
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret
-VITE_CLIENT_URL=https://pdf-signature-app-pi.vercel.app
+VITE_CLIENT_URL=https://your-client-url.vercel.app
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password_or_app_key
 ```
