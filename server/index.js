@@ -27,12 +27,13 @@ app.use(cors({
     callback(new Error("Not allowed by CORS"));
   },
   credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
-// app.use(cors({
-//   origin: process.env.VITE_CLIENT_URL,
-//   credentials: true,
-// }));
+app.options("*", cors());
+
+// Middleware
 app.use(express.json());
 
 // Serve static files from /uploads
