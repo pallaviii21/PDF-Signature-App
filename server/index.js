@@ -6,21 +6,30 @@ const fs = require("fs");
 
 const app = express();
 
-// ✅ Ensure uploads/ folder exists
 const uploadsDir = "uploads";
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir);
 }
 
-// ✅ CORS Setup (HARD-CODE frontend URL for deployment)
+
+const allowedOrigins = [
+  "https://pdf-signature-app-pi.vercel.app", // Vercel frontend
+  "http://localhost:5173", // local dev
+];
+
 app.use(cors({
-  origin: "https://pdf-signature-app-pi.vercel.app",  
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed for this origin"));
+    }
+  },
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
-// ✅ Middleware (MUST come after CORS)
 app.use(express.json());
 
 // ✅ Static file serving
