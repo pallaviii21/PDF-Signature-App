@@ -14,7 +14,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // ✅ CORS Setup (HARD-CODE frontend URL for deployment)
 app.use(cors({
-  origin: process.env.VITE_CLIENT_URL,  // 👈 your frontend on Vercel
+  origin: "https://pdf-signature-app-pi.vercel.app",  
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
